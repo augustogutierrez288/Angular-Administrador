@@ -1,0 +1,22 @@
+.container-aside-main{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container{
+    display: inline-block;
+    width: 100%;
+    height: 10%;
+}
+.aside-container{
+    width: 25%;
+    height: 100%;
+}
+.main-container{
+    width: 75%;
+    height: 100%;
+}
