@@ -1,7 +1,5 @@
 <div class="aside">
-    <div>Cursos</div>
-    <div>Comprar Cursos</div>
-    <div>Servicios Especiales</div>
-    <div>Ajustes</div>
-    <div>Cerrar Sesion</div>
+    <div *ngFor=" let buttons of buttonsAside">
+        {{buttons}}
+    </div>
 </div>

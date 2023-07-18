@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './aside.component.html',
   styleUrls: ['./aside.component.css']
 })
+
 export class AsideComponent {
+  buttonsAside: string[] = ['Cursos', 'Comprar cursos', 'Servicios especiales', 'Ajuste', 'Cerro Sesion'];
 
 }
