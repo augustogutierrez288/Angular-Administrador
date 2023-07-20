@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { AsideComponent } from './aside/aside.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

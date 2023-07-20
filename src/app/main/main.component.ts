@@ -13,7 +13,7 @@ export class MainComponent {
   titleLogaut : string = 'Cerrar Sesion';
 
   courses: { id: number, name: string, img: string }[] = [
-    { id: 1, name: 'Javascript inicial', img: '../../assets/js.png' },
+    { id: 1, name: 'Javascript inicial', img: '../assets/js.png' },
     { id: 2, name: 'Javascript intermedio', img: '../../assets/js.png' },
     {id: 3, name: 'Javascript avanzado', img: '../../assets/js.png'},
     {id: 4, name: 'Java', img: '../../assets/java.png'},

@@ -1,5 +1,64 @@
 <app-navbar class="navbar-container"></app-navbar>
 <div class="container-aside-main">
-  <app-aside class="aside-container"></app-aside>
-  <app-main class="main-container"></app-main>  
+  <div class="container-form">
+    <p>Añadir Cursos</p>
+    <form [formGroup]="courseModel" (submit)="onCourseForm()">
+      <div class="junior-container">
+        <label for="idCurso">ID</label>
+        <input 
+        formControlName ="id"
+        type="text" 
+        required 
+        name="idCurso" 
+        id="idCurso">
+      </div>
+      <div class="junior-container">
+        <label for="name">Nombre</label>
+        <input 
+        formControlName="name"
+        type="text" 
+        required 
+        name="name" 
+        id="name">
+      </div>
+      <div class="junior-container">
+        <label for="comision">Comision</label>
+        <input 
+        formControlName="comision"
+        type="text" 
+        required 
+        name="comision" 
+        id="comision">
+      </div>
+      <div class="junior-container">
+        <label for="comision">imagen</label>
+        <input 
+        formControlName="img"
+        type="text" 
+        required 
+        name="img" 
+        id="img">
+        <p>introducir la ruta de la imagen ej: <strong>../assets/js.png</strong> </p>
+      </div>
+      <input class="submit" type="submit" value="Cargar curso">
+
+    </form>
+  </div>
+  <div class="container-details">
+    <p>Detalles</p>
+    <pre> 
+      <p>Objeto:</p>
+      {{courseModel.value | json}} 
+    </pre>
+  </div>
+  <div class="container-courses">
+   <p>Cursos creados</p>
+    <div class="course" *ngFor=" let course of arrayCourses">
+      <img src={{course.img}} alt={{course.name}}>
+      <p><strong>ID:</strong> {{course.id}}</p>
+      <p><strong>Curso:</strong> {{course.name}}</p>
+      <p> <strong>Comision:</strong> {{course.comision}}</p>
+      <span [ngClass]="courseModel.status !== 'INVALID' ? 'valid ': 'invalid' "></span>
+    </div>
+  </div>
 </div>
